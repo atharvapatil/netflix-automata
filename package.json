@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/atharvapatil/netflix-automata#readme",
   "dependencies": {
-    "puppeteer": "^1.20.0"
+    "dotenv": "^8.1.0",
+    "puppeteer": "^1.20.0",
+    "random-int": "^2.0.1"
   }
 }
