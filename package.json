@@ -1,0 +1,28 @@
+{
+  "name": "netflix-automata",
+  "version": "1.0.0",
+  "description": "Neflix automator to pick a movie and start playing it",
+  "main": "automata.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atharvapatil/netflix-automata.git"
+  },
+  "keywords": [
+    "netflix",
+    "nodejs",
+    "puppteer",
+    "automation"
+  ],
+  "author": "Atharva Patil",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/atharvapatil/netflix-automata/issues"
+  },
+  "homepage": "https://github.com/atharvapatil/netflix-automata#readme",
+  "dependencies": {
+    "puppeteer": "^1.20.0"
+  }
+}
