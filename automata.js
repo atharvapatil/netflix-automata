@@ -1,9 +1,7 @@
-
 const puppeteer = require('puppeteer');
 const randomInt = require('random-int');
+require('dotenv').config()
 var seedInt = 0;
-
-console.log(process.env.SECRET_MESSAGE);
 
 NetflixAutomata();
 
@@ -13,7 +11,7 @@ async function NetflixAutomata(){
 
   console.log('Genrating a random number for the tab tubby tab count');
   
-  seedInt = randomInt(19, 60);
+  seedInt = randomInt(19, 80);
 
   console.log('Here\'\s the tab tubby number: ' + seedInt);
 
@@ -33,8 +31,8 @@ async function NetflixAutomata(){
 
   await page.waitFor('#id_userLoginId');
   await page.waitFor('#id_password');
-  await page.type('#id_userLoginId', '');
-  await page.type('#id_password', '');
+  await page.type('#id_userLoginId', process.env.USERNAME);
+  await page.type('#id_password', process.env.PASSWORD);
   await page.keyboard.press('Enter');
 
   console.log('attempting login');
