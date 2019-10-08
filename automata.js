@@ -5,11 +5,17 @@ var seedInt = 0;
 
 console.log(process.env.SECRET_MESSAGE);
 
-// NetflixAutomata();
+NetflixAutomata();
 
 async function NetflixAutomata(){
 
+  console.log('Beigning the script');
+
+  console.log('Genrating a random number for the tab tubby tab count');
+  
   seedInt = randomInt(19, 60);
+
+  console.log('Here\'\s the tab tubby number: ' + seedInt);
 
   const browser = await puppeteer.launch({
     headless: false,
@@ -68,5 +74,3 @@ async function NetflixAutomata(){
   await page.keyboard.press('Enter');
 
 }
-
-
