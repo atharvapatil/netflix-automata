@@ -10,14 +10,14 @@ async function NetflixAutomata(){
   console.log('Beigning the script');
 
   console.log('Genrating a random number for the tab tubby tab count');
-  
+
   seedInt = randomInt(19, 80);
 
   console.log('Here\'\s the tab tubby number: ' + seedInt);
 
   const browser = await puppeteer.launch({
     headless: false,
-    slowMo: 50
+    slowMo: 100
   });
 
   const page = await browser.newPage();
@@ -39,29 +39,29 @@ async function NetflixAutomata(){
 
   await page.waitFor('#appMountPoint > div > div > div:nth-child(1) > div > div.profiles-gate-container > div > div > ul > li:nth-child(3) > div > a > div > div')
 
-  console.log('Starting to select profile'); 
-  
+  console.log('Starting to select profile');
+
   for(let chooseAccount = 0; chooseAccount < 4; chooseAccount++){
     await page.keyboard.press('Tab');
   }
 
-  console.log('profile selected'); 
+  console.log('profile selected');
 
   await page.keyboard.press('Enter');
 
   await page.waitFor('#appMountPoint > div > div > div:nth-child(1) > div > div.mainView');
 
- 
+
 
   for(let selectingMovie = 0; selectingMovie < seedInt; selectingMovie++){
     await page.keyboard.press('Tab');
   }
 
-  console.log('Going to a random title'); 
+  console.log('Going to a random title');
 
   await page.keyboard.press('Enter');
 
-  console.log('Waiting for the title assets to load'); 
+  console.log('Waiting for the title assets to load');
 
   await page.waitFor(3000);
 
